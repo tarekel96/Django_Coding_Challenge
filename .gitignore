@@ -1,0 +1,5 @@
+*.log
+Django_App/Django_App/db.sqlite3
+Django_App/Django_App/db.sqlite3-journal
+*.env
+Django_App/.env
