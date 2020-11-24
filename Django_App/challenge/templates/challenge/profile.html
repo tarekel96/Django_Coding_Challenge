@@ -2,10 +2,11 @@
 
 <!-- Loads static files from static folder -->
 {% load static %}
+
 {% block content %}
 <!-- CHILD TEMPLATE SECTION -->
 <section class="d-flex justify-content-center mt-5">
-        <div class="card" style="width: 18rem;">
+        <div class="card-component card" style="width: 18rem;">
                 <img src="{% static '/images/tarekProfilePic.jpg' %}" class="card-img-top" alt="...">
                 <ul class="list-group list-group-flush">
                         <li class="list-group-item">Name: {{user.name}}</li>
