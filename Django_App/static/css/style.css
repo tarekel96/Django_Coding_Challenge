@@ -1,0 +1,13 @@
+* {
+        font-family: 'Castoro', serif;
+}
+body {
+        background-color: bisque;
+        color: #363636;
+}
+.home {
+        height: 100%;
+}
+.logout {
+        cursor: pointer;
+}
