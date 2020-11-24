@@ -4,9 +4,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def home(response):
-    return HttpResponse("Home")
+def home(request):
+    return render(request, 'challenge/home.html')
 
 
-def profile(response):
-    return HttpResponse("Profile")
+def profile(request):
+    return render(request, 'challenge/profile.html')
