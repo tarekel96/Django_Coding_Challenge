@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .userController import *
 
 # Create your views here.
 
@@ -9,4 +10,5 @@ def home(request):
 
 
 def profile(request):
-    return render(request, 'challenge/profile.html')
+    user = first_user()
+    return render(request, 'challenge/profile.html', {'user': user})

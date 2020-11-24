@@ -1,6 +1,21 @@
 {% extends 'challenge/main.html' %}
 
+<!-- Loads static files from static folder -->
+{% load static %}
 {% block content %}
 <!-- CHILD TEMPLATE SECTION -->
-<h1>Profile</h1>
+<section class="d-flex justify-content-center mt-5">
+        <div class="card" style="width: 18rem;">
+                <img src="{% static '/images/tarekProfilePic.jpg' %}" class="card-img-top" alt="...">
+                <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Name: {{user.name}}</li>
+                        <li class="list-group-item">Nickname: {{user.nickname}}
+                        </li>
+                        <li class="list-group-item">Profile Image: {{user.profile_image}}</li>
+                </ul>
+                <div class="card-body d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-info">Update Info</button>
+                </div>
+        </div>
+</section>
 {% endblock %}
