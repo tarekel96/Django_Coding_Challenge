@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <!-- HOME ICON COMPONENT -->
-        <a class="navbar-brand" href="#">{% include 'challenge/homeIcon.html' %}</a>
+        <a class="navbar-brand" href="/">{% include 'challenge/homeIcon.html' %}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -8,8 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                                <a id="profile-link" class="nav-link" href="profile">Profile <span
-                                                class="sr-only">(current)</span></a>
+                                <a id="profile-link" class="nav-link" href="{% url 'profile' id=id%}">Profile
+                                        <span class="sr-only">(current)</span></a>
                         </li>
                 </ul>
                 <span class="logout navbar-text">
