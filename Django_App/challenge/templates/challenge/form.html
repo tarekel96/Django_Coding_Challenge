@@ -1,15 +1,20 @@
-<form>
+<!-- Loads static files from static folder -->
+{% load static %}
+
+<form action="/profile/" method="post">
+        {% csrf_token %}
+        <!-- {{form}} -->
         <div class="form-group">
-                <label for="exampleInputEmail1">Name: </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="name">Name: </label>
+                <input name="name" class="form-control" id="name" value="{{ user.name }}">
         </div>
         <div class="form-group">
                 <label for="nickname">Nickname: </label>
-                <input class="form-control" id="nickname">
+                <input name="nickname" class="form-control" id="nickname" value="{{ user.nickname }}">
         </div>
         <div class="form-group">
-                <label for="imagesrc">Image Src: </label>
-                <input class="form-control" id="imagesrc">
+                <label for="profile_image">Image Src: </label>
+                <input name="profile_image" class="form-control" id="profile_image" value="{{ user.profile_image }}">
         </div>
         <button type="submit" class="btn btn-info">Submit</button>
 </form>
