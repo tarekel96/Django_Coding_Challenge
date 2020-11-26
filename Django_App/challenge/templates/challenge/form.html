@@ -1,7 +1,7 @@
 <!-- Loads static files from static folder -->
 {% load static %}
 
-<form action="/profile/" method="post">
+<form action="/profile/{{id}}/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <!-- {{form}} -->
         <div class="form-group">
