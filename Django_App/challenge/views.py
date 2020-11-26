@@ -16,7 +16,7 @@ def home(request, id=1):
 def profile(request, id=1):
     user = user_by_id(id)
     id = user.id
-    form = ProfileForm(request.POST or None, instance=user)
+    form = ProfileForm(request.POST or None, request.FILES, instance=user)
     context = {'user': user, 'id': id, "form": form}
     message = ""
     # HANDLE FORM DATA
