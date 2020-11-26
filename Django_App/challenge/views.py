@@ -18,15 +18,12 @@ def profile(request, id=1):
     id = user.id
     form = ProfileForm(request.POST or None, request.FILES, instance=user)
     context = {'user': user, 'id': id, "form": form}
-    message = ""
     # HANDLE FORM DATA
     if request.method == "POST":
         # binding data to the form
         form.save(commit=True)
         if form.is_valid():
             return render(request, 'challenge/profile.html', context)
-
-# return HttpResponse('Success')
         else:
             return HttpResponse('ERROR')
     return render(request, 'challenge/profile.html', context)

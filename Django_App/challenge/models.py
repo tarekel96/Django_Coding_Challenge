@@ -8,7 +8,6 @@ class User(models.Model):
     name = models.CharField(max_length=200, null=True)
     nickname = models.CharField(max_length=200, null=True)
     profile_image = models.ImageField(upload_to='images/', null=True)
-    # profile_image = models.CharField(max_length=200, null=True)
     # automatically determines when a user is added to the DB
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 

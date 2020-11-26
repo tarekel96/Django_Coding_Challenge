@@ -1,8 +1,7 @@
 from .models import User
 
-# ***(1)Returns all users from user table
 
-
+# (1)Returns all users from user table
 def get_all_users():
     return User.objects.all()
 
